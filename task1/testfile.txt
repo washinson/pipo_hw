@@ -1,0 +1,6 @@
+1 ls
+1 ls
+3 echo
+3 echo
+3 echo
+9 ls
