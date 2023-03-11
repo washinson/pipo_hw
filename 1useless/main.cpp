@@ -34,8 +34,8 @@ int main(int argc, char *argv[]) {
             threads.emplace_back([now, begin, program](){
                 std::cout << "run command: " << program << " in " << std::chrono::duration_cast<std::chrono::seconds>(now - begin).count() << "seconds" << std::endl;
                 std::cout.flush();
-                execl(program.c_str(), program.c_str(), (char *) nullptr);
-            }).detach();
+                system(program.c_str());
+            });
         }
     }
     for (auto& thread : threads) {
